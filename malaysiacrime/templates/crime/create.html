@@ -31,8 +31,8 @@
             if (GBrowserIsCompatible()) {
                 map = new GMap2(document.getElementById("map_create"));
                 map.setCenter(
-                    new GLatLng(parseFloat(+"{{ request.POST.lat }}") || 3.0, parseFloat(+"{{ request.POST.lng }}") || 102.2),
-                    parseInt(+"{{ request.POST.zoom }}") || 9);
+                    new GLatLng(parseFloat(+"{{ request.POST.lat }}") || 40.703, parseFloat(+"{{ request.POST.lng }}") || -73.917),
+                    parseInt(+"{{ request.POST.zoom }}") || 13);
                 map.setUIToDefault();
                 map.disableScrollWheelZoom();
                 map.addOverlay(new CrimeMarker(eval("{{ request.POST.icon }}" || "G_DEFAULT_ICON")));
