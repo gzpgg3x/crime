@@ -10,8 +10,8 @@
             if (GBrowserIsCompatible()) {
                 map = new GMap2(document.getElementById("map_create"));
                 map.setCenter(
-                    new GLatLng(parseFloat(+"{{ request.POST.lat }}") || 3.0, parseFloat(+"{{ request.POST.lng }}") || 102.2),
-                    parseInt(+"{{ request.POST.zoom }}") || 9);
+                    new GLatLng(parseFloat(+"{{ request.POST.lat }}") || 40.703, parseFloat(+"{{ request.POST.lng }}") || -73.917),
+                    parseInt(+"{{ request.POST.zoom }}") || 13);
                 map.setUIToDefault();
                 map.disableScrollWheelZoom();
                 setupHandler();
@@ -60,11 +60,11 @@
 {% block content %}
     <div class="title span-24 last"><h1>Subscribe to Monitor Service</h1></div>
     <div class="subtitle span-24 last">
-        <p>The Monitor service helps you to monitor crimes in areas of your interest. If a
-            crime happened in that area, our system will send you an email notifying you about the crime.</p>
+        <p>The Monitor service helps you to monitor events in areas of your interest. If an
+            event happened in that area, our system will send you an email notifying you about the event.</p>
         <p>To subscribe to the Monitor service, you only have to <strong>choose the area</strong> you would like to monitor on the map.
             And input your <strong>email address</strong> below. You can subscribe to as many areas as you want using the same email.</p>
-        <p><em>NOTE: We will only send you a maximum of ONE email a day. No email will be sent if no crime happen in your area of interest.</em></p>
+        <p><em>NOTE: We will only send you a maximum of ONE email a day. No email will be sent if no event happen in your area of interest.</em></p>
     </div>
     <form action="." method="post">{% csrf_token %}
         <div class="label span-4">Area to Monitor :</div>

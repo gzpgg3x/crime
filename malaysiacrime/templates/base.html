@@ -19,7 +19,7 @@
 <div class="container">
 {% block header %}
     <div class="span-6" style="padding-top: 8px; text-align: left;">
-        <a href="/"><img src="http://static.malaysiacrime.com/static/images/logo.gif" alt="Malaysia Crime Logo" title="Malaysia Crime"/></a>
+<!--         <a href="/"><img src="http://static.malaysiacrime.com/static/images/logo.gif" alt="Malaysia Crime Logo" title="Malaysia Crime"/></a> -->
     </div>
     <div class="span-14" id="nav">
         <ul>
@@ -27,10 +27,10 @@
             {% block tab1 %}<li><a href="{% url main-recent-commented %}"><span>Commented</span></a></li>{% endblock %}
             {# {% block tab2 %}<li><a href="{% url main-recent-updated %}"><span>Recent Updated</span></a></li>{% endblock %} #}
             {% block tab3 %}<li><a href="{% url monitor-subscribe %}"><span>Monitor</span></a></li>{% endblock %}
-            {% block tab4 %}<li><a href="{% url main-search %}"><span>Search</span></a></li>{% endblock %}
-            <li><a href="http://blog.malaysiacrime.com"><span>Blog</span></a></li>
+<!--             {% block tab4 %}<li><a href="{% url main-search %}"><span>Search</span></a></li>{% endblock %}
+            <li><a href="http://blog.malaysiacrime.com"><span>Blog</span></a></li> -->
             {% block tababout %}<li><a href="{% url main-about %}"><span>About</span></a></li>{% endblock %}
-            {% block tab5 %}<li><a href="{% url crime-create %}"><span>Report a Crime</span></a></li>{% endblock %}
+            {% block tab5 %}<li><a href="{% url crime-create %}"><span>Share</span></a></li>{% endblock %}
         </ul>
     </div>
 <div class="clear"></div>
@@ -39,7 +39,7 @@
 {% block content %}
 {% endblock %}
 
-{% block footer %}
+<!-- {% block footer %}
     <div class="footer span-24">
         <p>Copyright <a href="http://kegan.info">Kegan Gan</a> //
         <a href="http://creativecommons.org/licenses/by/3.0/us/" title="Creative Commons Attribution">Some Rights Reserved</a> //
@@ -48,7 +48,7 @@
         Hosted at <a href="http://www.webfaction.com/?affiliate=kegan33">WebFaction</a><br />
         Full disclaimer to the authors and contributors if you use this site.</p>
     </div>
-{% endblock %}
+{% endblock %} -->
 </div>
 
     <script type="text/javascript">

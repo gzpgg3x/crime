@@ -71,27 +71,27 @@
     </script>
 {% endblock %}
 
-{% block title %}Update Crime Report{% endblock %}
+{% block title %}Update Event{% endblock %}
 
 {% block content %}
-    <div class="title span-24 last"><h1>Update Crime Report</h1></div>
+    <div class="title span-24 last"><h1>Update Event</h1></div>
     <form action="." method="post">{% csrf_token %}
         <div class="label span-4">Headline :</div>
         <div class="field span-20 last">
             {% if form.headline.errors %}<span class="errors">{{ form.headline.errors|join:" // " }}</span><br />{% endif %}
-            {{ form.headline }}<br /><em>Provide a title for your entry. In the case of crimes reported in the media, please use the original headline.</em>
+            {{ form.headline }}<br /><em>Provide a title for your entry. In the case of events reported in the media, please use the original headline.</em>
         </div>
 
         <div class="label span-4">Date :</div>
         <div class="field span-20 last">
             {% if form.date.errors %}<span class="errors">{{ form.date.errors|join:" // " }}</span><br />{% endif %}
-            {{ form.date }}<br /> <em>Date of the crime. Eg, <strong>21 Mar 2009</strong> or <strong>2009-03-21</strong>.</em>
+            {{ form.date }}<br /> <em>Date of the event.</em>
         </div>
 
         <div class="label span-4">Location :</div>
         <div class="field span-20 last">
             {% if form.location.errors %}<span class="errors">{{ form.location.errors|join:" // " }}</span><br />{% endif %}
-            {{ form.location }}<br /><em>What is the location of this crime? <strong>Eg. Jalan 9/1 Bandar Puteri, Puchong, Selangor</strong>.</em>
+            {{ form.location }}<br /><em>What is the location of this crime? </em>
         </div>
 
         <div class="label span-4">&nbsp;</div>
@@ -113,14 +113,14 @@
         <div class="label span-4">Details :</div>
         <div class="field span-20 last">
             <em>
-                Please describe the crime in details.<br />{{ form.details }}<br />
-                You can use the following to format your post:<br />
+                Please describe the event in details.<br />{{ form.details }}<br />
+<!--                 You can use the following to format your post:<br />
                 <span style="font-family:courier;">
                 &nbsp;&nbsp;_make the text italic_<br />
                 &nbsp;&nbsp;__make the text bold__<br />
                 &nbsp;&nbsp;![picture name](http://url_address_of_pic/pic.jpg/)<br />
                 &nbsp;&nbsp;[link name](http://url_address_of_link/link.html/)
-                </span>
+                </span> -->
             </em>
         </div>
 

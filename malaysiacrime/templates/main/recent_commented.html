@@ -2,7 +2,7 @@
 {% load comments %}
 
 {% block meta %}
-    <meta name="description" content="Recent Commented Malaysia Crime News on Google Map">
+    <meta name="description" content="Recent Commented Bushwick Events on Google Map">
 {% endblock %}
 
 {% block map_script %}
@@ -17,7 +17,7 @@
         function initialize() {
             if (GBrowserIsCompatible()) {
                 map = new GMap2(document.getElementById("map_index"));
-                map.setCenter(new GLatLng(4.0, 102.2), 7);
+                map.setCenter(new GLatLng(40.703, -73.917), 13);
                 map.setUIToDefault();
                 map.disableScrollWheelZoom();
                 window.setTimeout(setupMarkers, 0);
@@ -58,15 +58,15 @@
 
 {% block tab1 %}<li><a class="active"><span>Commented</span></a></li>{% endblock %}
 
-{% block title %}Recent Commented - Malaysia Crime{% endblock %}
+{% block title %}Recent Commented - Bushwick Events{% endblock %}
 
 {% block content %}
     <div class="title span-14">
-        <h2>Recent Commented Malaysia Crimes</h2>
+        <h2>Recent Commented Bushwick Events</h2>
     </div>
 
     <div class="stats span-10 last">
-        Showing <strong>{{ crimes|length }}</strong> of <strong>{{ crime_total }}</strong> Crime Reports
+        Showing <strong>{{ crimes|length }}</strong> of <strong>{{ crime_total }}</strong> Events
     </div>
     <div id="map_index" class="span-24 last"></div>
 

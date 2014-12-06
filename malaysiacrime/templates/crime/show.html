@@ -24,7 +24,7 @@
     </script>
 {% endblock %}
 
-{% block title %}{{ crime.headline }} - Malaysia Crime{% endblock %}
+{% block title %}{{ crime.headline }} - Sweet Home Bushwick{% endblock %}
 
 {% block content %}
     <div class="headline span-24 last"><h1>{{ crime.headline }}</h1></div>
@@ -42,7 +42,7 @@
     <div class="details span-24 last">{{ crime.details|markdown:"safe" }}</div>
 
     <div class="update span-24 last">
-        <a href="{% url crime-update crime.id %}">Update this Crime Report</a>
+        <a href="{% url crime-update crime.id %}">Update this Event</a>
     </div>
 
     {% get_comment_list for crime as comments %}
