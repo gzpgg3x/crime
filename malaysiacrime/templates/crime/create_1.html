@@ -102,12 +102,12 @@
 
 		<div class="span-3 last" id="nav-img">
 			<ul>
- 				<li id="id_icon_default"><img src="{{ MEDIA_URL }}images/icons/marker.png"></li>
+<!-- 				<li id="id_icon_default"><img src="{{ MEDIA_URL }}images/icons/marker.png"></li>
 				<li id="id_icon_rempit"><img src="{{ MEDIA_URL }}images/icons/rempit/image.png"></li>
 				<li id="id_icon_gun"><img src="{{ MEDIA_URL }}images/icons/gun/image.png"></li>
 				<li id="id_icon_skull"><img src="{{ MEDIA_URL }}images/icons/skull/image.png"></li>
 				<li id="id_icon_parang"><img src="{{ MEDIA_URL }}images/icons/parang/image.png"></li>
-				<li id="id_icon_rape"><img src="{{ MEDIA_URL }}images/icons/rape/image.png"></li> 
+				<li id="id_icon_rape"><img src="{{ MEDIA_URL }}images/icons/rape/image.png"></li> -->
 			</ul>
 		</div>
 
@@ -129,11 +129,23 @@
             </em>
         </div>
 
-<!--         <div class="label span-4">
+<!--         <div class="label span-20 Last">
             <input type="file" name="fileToUpload" id="fileToUpload">
-        </div>
-        <input type="submit" value="Upload Image" name="submit"> -->
+        </div> -->
+        <!-- <div class="label span-4">&nbsp;</div> -->
+<!--         <div class="label span-4">Image :</div>        
+        <div class="field span-20 last">
+            <input  value="Choose Image" type="file" name="fileToUpload" id="fileToUpload"> -->
+            <!-- <input type="submit" value="Upload Image" name="submit">            
+        </div>        
+ -->
+        <!-- <br/> -->
+<!--         <div class="label span-4">&nbsp;</div> -->
+<!--         <div class="label span-4">
+            <input type="submit" value="Upload Image" name="submit">
+        </div> -->
 
+        <!-- <div class="label span-4">&nbsp;</div> -->
         <div class="label span-4">Your Name :</div>
         <div class="field span-20 last">
             {% if form.author.errors %}<span class="errors">{{ form.author.errors|join:" // " }}</span><br />{% endif %}

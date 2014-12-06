@@ -19,10 +19,18 @@
 <div class="container">
 {% block header %}
     <div class="span-6" style="padding-top: 8px; text-align: left;">
-<!--         <a href="/"><img src="http://static.malaysiacrime.com/static/images/logo.gif" alt="Malaysia Crime Logo" title="Malaysia Crime"/></a> -->
+        <a href="/"><img src="http://askyourquestions.info/bushwick_logo.png"  style="width: 240px;height:170px;" alt="Sweet Home Bushwick Logo" title="Sweet Home Bushwick"/></a>
+ <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+                        <a class="addthis_button_facebook addthis_button_preferred_1 at300b" title="Facebook" href="#"><span class=" at300bs at15nc at15t_facebook"><span class="at_a11y">Share on facebook</span></span></a><a class="addthis_button_twitter addthis_button_preferred_2 at300b" title="Tweet" href="#"><span class=" at300bs at15nc at15t_twitter"><span class="at_a11y">Share on twitter</span></span>
+                        </a><a class="addthis_button_email addthis_button_preferred_3 at300b" target="_blank" title="Email" href="#"><span class=" at300bs at15nc at15t_email"><span class="at_a11y">Share on email</span></span></a><a class="addthis_button_print addthis_button_preferred_4 at300b" title="Print" href="#"><span class=" at300bs at15nc at15t_print"><span class="at_a11y">Share on print</span></span>
+                        </a><a class="addthis_button_compact at300m" href="#"><span class=" at300bs at15nc at15t_compact"><span class="at_a11y">More Sharing Services</span></span></a><a class="addthis_counter addthis_bubble_style" href="#" style="display: inline-block;">7</a>
+                        <span id="ctl00_LblMessageSent0" style="color:Chocolate;"></span>
+                    <div class="atclear"></div></div>
     </div>
-    <div class="span-14" id="nav">
+   
+    <div class="span-14" id="nav" style="background-color: #000000;">
         <ul>
+            {% block tab0 %}<li><a href="{% url main-index %}"><span>Home</span></a></li>{% endblock %}            
             {# {% block tab0 %}<li><a href="{% url main-index %}"><span>Home</span></a></li>{% endblock %} #}
             {% block tab1 %}<li><a href="{% url main-recent-commented %}"><span>Commented</span></a></li>{% endblock %}
             {# {% block tab2 %}<li><a href="{% url main-recent-updated %}"><span>Recent Updated</span></a></li>{% endblock %} #}
@@ -31,7 +39,12 @@
             <li><a href="http://blog.malaysiacrime.com"><span>Blog</span></a></li> -->
             {% block tababout %}<li><a href="{% url main-about %}"><span>About</span></a></li>{% endblock %}
             {% block tab5 %}<li><a href="{% url crime-create %}"><span>Share</span></a></li>{% endblock %}
+            <li> 
+                </li>
         </ul>
+        
+                    <script type="text/javascript">                        var addthis_config = { "data_track_clickback": true };</script>
+                    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4d6c52d60ca3cc28"></script>
     </div>
 <div class="clear"></div>
 {% endblock %}
